@@ -1,0 +1,232 @@
+<script type="text/javascript">
+        var gk_isXlsx = false;
+        var gk_xlsxFileLookup = {};
+        var gk_fileData = {};
+        function filledCell(cell) {
+          return cell !== '' && cell != null;
+        }
+        function loadFileData(filename) {
+        if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
+            try {
+                var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
+                var firstSheetName = workbook.SheetNames[0];
+                var worksheet = workbook.Sheets[firstSheetName];
+
+                // Convert sheet to JSON to filter blank rows
+                var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
+                // Filter out blank rows (rows where all cells are empty, null, or undefined)
+                var filteredData = jsonData.filter(row => row.some(filledCell));
+
+                // Heuristic to find the header row by ignoring rows with fewer filled cells than the next row
+                var headerRowIndex = filteredData.findIndex((row, index) =>
+                  row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
+                );
+                // Fallback
+                if (headerRowIndex === -1 || headerRowIndex > 25) {
+                  headerRowIndex = 0;
+                }
+
+                // Convert filtered JSON back to CSV
+                var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex)); // Create a new sheet from filtered array of arrays
+                csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
+                return csv;
+            } catch (e) {
+                console.error(e);
+                return "";
+            }
+        }
+        return gk_fileData[filename] || "";
+        }
+        </script><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>US GDP Growth Rates</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+        h2 {
+            color: #34495e;
+            margin-top: 20px;
+        }
+        .tab-container {
+            margin-bottom: 20px;
+        }
+        .tab-nav {
+            display: flex;
+            border-bottom: 2px solid #ddd;
+        }
+        .tab-nav button {
+            background: #f1f1f1;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s;
+        }
+        .tab-nav button.active {
+            background: #3498db;
+            color: white;
+        }
+        .tab-nav button:hover:not(.active) {
+            background: #e0e0e0;
+        }
+        .tab-content {
+            display: none;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-top: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background: #3498db;
+            color: white;
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+        @media (max-width: 600px) {
+            .tab-nav button {
+                padding: 8px 12px;
+                font-size: 14px;
+            }
+            th, td {
+                padding: 8px;
+                font-size: 14px;
+            }
+        }
+        .source {
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>US GDP Growth Rates</h1>
+
+    <div class="tab-container">
+        <div class="tab-nav">
+            <button class="tab-button active" onclick="openTab('us-gdp')">US GDP</button>
+        </div>
+        <div id="us-gdp" class="tab-content active">
+            <p>
+                This section presents the latest available Real GDP growth rates for the United States, covering the last five quarters. It includes Year-over-Year (YoY, compared to the same quarter of the previous year) and Quarter-over-Quarter (QoQ, annualized, compared to the previous quarter) data. All values are inflation-adjusted and sourced from the U.S. Bureau of Economic Analysis (BEA), validated by secondary sources such as Statista and Trading Economics. Data as of May 2025.
+            </p>
+
+            <h2>1. Real GDP Year-over-Year (YoY) Quarterly Data</h2>
+            <table>
+                <tr>
+                    <th>Quarter</th>
+                    <th>YoY Growth Rate (%)</th>
+                    <th>Notes</th>
+                </tr>
+                <tr>
+                    <td>Q1 2025</td>
+                    <td>2.0</td>
+                    <td>Preliminary estimate</td>
+                </tr>
+                <tr>
+                    <td>Q4 2024</td>
+                    <td>2.4</td>
+                    <td>Third estimate</td>
+                </tr>
+                <tr>
+                    <td>Q3 2024</td>
+                    <td>2.8</td>
+                    <td>Third estimate</td>
+                </tr>
+                <tr>
+                    <td>Q2 2024</td>
+                    <td>~2.5–3.0</td>
+                    <td>Estimated, based on 2023 annual average</td>
+                </tr>
+                <tr>
+                    <td>Q1 2024</td>
+                    <td>~2.5</td>
+                    <td>Estimated, based on 2023 annual average</td>
+                </tr>
+            </table>
+            <p><strong>Notes:</strong> YoY rates compare a quarter's GDP to the same quarter of the previous year. Estimated values for Q1/Q2 2024 are based on the 2023 annual average (2.5%) and trends due to unavailable exact YoY data.</p>
+
+            <h2>2. Real GDP Quarter-over-Quarter (QoQ) Quarterly Data</h2>
+            <table>
+                <tr>
+                    <th>Quarter</th>
+                    <th>QoQ Growth Rate (%)</th>
+                    <th>Notes</th>
+                </tr>
+                <tr>
+                    <td>Q1 2025</td>
+                    <td>-0.3</td>
+                    <td>Preliminary estimate, decline due to import surge (41.3%) and lower government spending (-1.4%)</td>
+                </tr>
+                <tr>
+                    <td>Q4 2024</td>
+                    <td>+2.4</td>
+                    <td>Third estimate, driven by consumption and investment</td>
+                </tr>
+                <tr>
+                    <td>Q3 2024</td>
+                    <td>+2.8</td>
+                    <td>Third estimate, strong growth</td>
+                </tr>
+                <tr>
+                    <td>Q2 2024</td>
+                    <td>+3.0</td>
+                    <td>Second estimate</td>
+                </tr>
+                <tr>
+                    <td>Q1 2024</td>
+                    <td>+1.4</td>
+                    <td>Third estimate</td>
+                </tr>
+            </table>
+            <p><strong>Notes:</strong> QoQ rates are annualized (growth extrapolated to a year). Q1 2025 data is subject to revision on May 29, 2025.</p>
+
+            <p class="source">
+                <strong>Sources:</strong> U.S. Bureau of Economic Analysis (BEA), Statista, Trading Economics, FRED. Data as of May 6, 2025.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        function openTab(tabName) {
+            const contents = document.getElementsByClassName('tab-content');
+            for (let content of contents) {
+                content.classList.remove('active');
+            }
+            const buttons = document.getElementsByClassName('tab-button');
+            for (let button of buttons) {
+                button.classList.remove('active');
+            }
+            document.getElementById(tabName).classList.add('active');
+            event.currentTarget.classList.add('active');
+        }
+    </script>
+</body>
+</html>
