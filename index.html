@@ -90,13 +90,9 @@
             flex-wrap: wrap;
             justify-content: center;
         }
-        #financialjuice-eco-widget-container {
-            width: 340px;
-            height: 600px;
-            overflow: auto;
-        }
+        #financialjuice-eco-widget-container,
         #financialjuice-news-widget-container {
-            width: 500px;
+            width: 360px;
             height: 600px;
             overflow: auto;
         }
@@ -146,13 +142,7 @@
             #financialjuice-eco-widget-container,
             #financialjuice-news-widget-container {
                 width: 100%;
-                max-width: 340px;
-            }
-            #financialjuice-news-widget-container {
-                max-width: 500px;
-            }
-            .tile {
-                flex: 1 1 100%;
+                max-width: 360px;
             }
         }
         @media (max-width: 640px) {
@@ -174,6 +164,9 @@
             .tile h2 {
                 font-size: 1.25rem;
             }
+            .tile {
+                flex: 1 1 100%;
+            }
         }
     </style>
 </head>
@@ -186,7 +179,9 @@
             <h2>Real-Time Wirtschaftsdaten</h2>
             <p>Economic Calendar und Nachrichten</p>
             <div class="widgets-container">
+                <!-- FinancialJuice Widget -->
                 <div id="financialjuice-eco-widget-container"></div>
+                <!-- FinancialJuice Widget -->
                 <div id="financialjuice-news-widget-container"></div>
             </div>
         </div>
@@ -213,6 +208,38 @@
         <p>© 2025 Wirtschaftsdaten CMS</p>
     </footer>
     <script type="text/javascript">
+        var gk_isXlsx = false;
+        var gk_xlsxFileLookup = {};
+        var gk_fileData = {};
+        function filledCell(cell) {
+            return cell !== '' && cell != null;
+        }
+        function loadFileData(filename) {
+            if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
+                try {
+                    var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
+                    var firstSheetName = workbook.SheetNames[0];
+                    var worksheet = workbook.Sheets[firstSheetName];
+                    var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
+                    var filteredData = jsonData.filter(row => row.some(filledCell));
+                    var headerRowIndex = filteredData.findIndex((row, index) =>
+                        row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
+                    );
+                    if (headerRowIndex === -1 || headerRowIndex > 25) {
+                        headerRowIndex = 0;
+                    }
+                    var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex));
+                    csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
+                    return csv;
+                } catch (e) {
+                    console.error(e);
+                    return "";
+                }
+            }
+            return gk_fileData[filename] || "";
+        }
+    </script>
+    <script type="text/javascript">
         var jo = document.createElement("script");
         jo.type = "text/javascript";
         jo.id = "FJ-Widgets";
@@ -222,17 +249,17 @@
             var ecoOptions = {};
             ecoOptions.container = "financialjuice-eco-widget-container";
             ecoOptions.mode = "standard";
-            ecoOptions.width = "340px";
+            ecoOptions.width = "360px";
             ecoOptions.height = "600px";
-            ecoOptions.backColor = "1e222d";
-            ecoOptions.fontColor = "b2b5be";
+            ecoOptions.backColor = "ffffff";
+            ecoOptions.fontColor = "000000";
             ecoOptions.widgetType = "ECOCAL";
             new window.FJWidgets.createWidget(ecoOptions);
 
             var newsOptions = {};
             newsOptions.container = "financialjuice-news-widget-container";
-            newsOptions.mode = "Dark";
-            newsOptions.width = "500px";
+            newsOptions.mode = "Light";
+            newsOptions.width = "360px";
             newsOptions.height = "600px";
             newsOptions.backColor = "1e222d";
             newsOptions.fontColor = "b2b5be";
@@ -242,5 +269,6 @@
         document.getElementsByTagName("head")[0].appendChild(jo);
     </script>
     <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'93c014789984bcaa',t:'MTc0NjYxNDIyNC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+    <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'93c13670ba88b04d',t:'MTc0NjYyNjEwMS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
 </body>
 </html>
