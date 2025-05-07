@@ -38,63 +38,209 @@
         return gk_fileData[filename] || "";
         }
         </script><!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Economic Analysis</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>CMS Webseite - Wirtschaftsdaten</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7fafc;
+            color: #2d3748;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #1a202c;
+            color: #ffffff;
+            padding: 1.5rem 0;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2.25rem;
+            font-weight: 700;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+        .section {
+            background-color: #ffffff;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        .section h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 1rem;
+        }
+        .widgets-container {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        #financialjuice-eco-widget-container {
+            width: 340px;
+            height: 600px;
+            overflow: auto;
+        }
+        #financialjuice-news-widget-container {
+            width: 500px;
+            height: 600px;
+            overflow: auto;
+        }
+        .tiles-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
         .tile {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background-color: #ffffff;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            margin: 1rem 0;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            flex: 1 1 48%;
         }
         .tile:hover {
-            transform: scale(1.05);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+        }
+        .tile h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 0.5rem;
+        }
+        .tile p {
+            color: #718096;
+        }
+        footer {
+            background-color: #1a202c;
+            color: #a0aec0;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+        footer p {
+            font-size: 0.875rem;
+        }
+        @media (max-width: 768px) {
+            .widgets-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            #financialjuice-eco-widget-container,
+            #financialjuice-news-widget-container {
+                width: 100%;
+                max-width: 340px;
+            }
+            #financialjuice-news-widget-container {
+                max-width: 500px;
+            }
+            .tile {
+                flex: 1 1 100%;
+            }
+        }
+        @media (max-width: 640px) {
+            header h1 {
+                font-size: 1.75rem;
+            }
+            .container {
+                padding: 0 1rem;
+            }
+            .section {
+                padding: 1.5rem;
+            }
+            .section h2 {
+                font-size: 1.25rem;
+            }
+            .tile {
+                padding: 1.5rem;
+            }
+            .tile h2 {
+                font-size: 1.25rem;
+            }
         }
     </style>
 </head>
-<body class="bg-gray-100 font-sans">
-    <!-- Header -->
-    <header class="bg-gray-900 text-white py-4">
-        <div class="container mx-auto px-4 flex justify-between items-center">
-            <h1 class="text-2xl font-bold">Economic Analysis</h1>
-            <button id="menu-toggle" class="text-2xl focus:outline-none md:hidden">☰</button>
-            <nav id="sidebar" class="hidden md:flex md:items-center">
-                <a href="index.html" class="px-4 py-2 text-white hover:text-blue-400">Home</a>
-            </nav>
-        </div>
-        <div id="mobile-sidebar" class="fixed top-0 right-0 h-full w-64 bg-gray-800 text-white transform translate-x-full md:hidden">
-            <ul class="mt-16 p-4">
-                <li><a href="index.html" class="block py-2 hover:text-blue-400">Home</a></li>
-            </ul>
-        </div>
+<body>
+    <header>
+        <h1>Wirtschaftsdaten Übersicht</h1>
     </header>
-
-    <!-- Main Content -->
-    <main class="container mx-auto px-4 py-12">
-        <h2 class="text-3xl font-bold text-center mb-8">Explore Economic Insights</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <!-- Tile -->
-            <a href="bessent-plan.html" class="tile bg-white rounded-lg shadow-lg p-6 text-center">
-                <h3 class="text-xl font-semibold mb-2">Scott-Bessent’s 3-3-3 Plan</h3>
-                <p class="text-gray-600">Analyze the goals, GDP data, and fiscal impacts of Scott Bessent’s economic strategy.</p>
-            </a>
+    <div class="container">
+        <div class="section">
+            <h2>Real-Time Wirtschaftsdaten</h2>
+            <p>Economic Calendar und Nachrichten</p>
+            <div class="widgets-container">
+                <div id="financialjuice-eco-widget-container"></div>
+                <div id="financialjuice-news-widget-container"></div>
+            </div>
         </div>
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-6 text-center">
-        <p>© 2025 Economic Analysis. Data sourced from BEA and FRED.</p>
+        <div class="tiles-container">
+            <div class="tile" onclick="window.location.href='us-macro.html'">
+                <h2>US Makro-View</h2>
+                <p>Aktuelle Wirtschaftsindikatoren und Trends der US-Wirtschaft.</p>
+            </div>
+            <div class="tile" onclick="window.location.href='japan-macro.html'">
+                <h2>Japan Makro-View</h2>
+                <p>Aktuelle Wirtschaftsindikatoren und Trends der japanischen Wirtschaft.</p>
+            </div>
+            <div class="tile" onclick="window.location.href='china-macro.html'">
+                <h2>China Makro-View</h2>
+                <p>Aktuelle Wirtschaftsindikatoren und Trends der chinesischen Wirtschaft.</p>
+            </div>
+            <div class="tile" onclick="window.location.href='eu-macro.html'">
+                <h2>EU Makro-View</h2>
+                <p>Aktuelle Wirtschaftsindikatoren und Trends der europäischen Wirtschaft.</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>© 2025 Wirtschaftsdaten CMS</p>
     </footer>
+    <script type="text/javascript">
+        var jo = document.createElement("script");
+        jo.type = "text/javascript";
+        jo.id = "FJ-Widgets";
+        var r = Math.floor(Math.random() * (9999 - 0 + 1) + 0);
+        jo.src = "https://feed.financialjuice.com/widgets/widgets.js?r=" + r + "";
+        jo.onload = function(){ 
+            var ecoOptions = {};
+            ecoOptions.container = "financialjuice-eco-widget-container";
+            ecoOptions.mode = "standard";
+            ecoOptions.width = "340px";
+            ecoOptions.height = "600px";
+            ecoOptions.backColor = "1e222d";
+            ecoOptions.fontColor = "b2b5be";
+            ecoOptions.widgetType = "ECOCAL";
+            new window.FJWidgets.createWidget(ecoOptions);
 
-    <script>
-        // Menu Toggle
-        const menuToggle = document.getElementById('menu-toggle');
-        const sidebar = document.getElementById('mobile-sidebar');
-        menuToggle.addEventListener('click', () => {
-            sidebar.classList.toggle('translate-x-full');
-        });
+            var newsOptions = {};
+            newsOptions.container = "financialjuice-news-widget-container";
+            newsOptions.mode = "Dark";
+            newsOptions.width = "500px";
+            newsOptions.height = "600px";
+            newsOptions.backColor = "1e222d";
+            newsOptions.fontColor = "b2b5be";
+            newsOptions.widgetType = "NEWS";
+            new window.FJWidgets.createWidget(newsOptions);
+        } 
+        document.getElementsByTagName("head")[0].appendChild(jo);
     </script>
+    <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'93c014789984bcaa',t:'MTc0NjYxNDIyNC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
 </body>
 </html>
