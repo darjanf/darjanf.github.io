@@ -1,0 +1,349 @@
+{
+  "triage": {
+    "affected_themes": [
+      {
+        "name": "China-US Rare Earth Negotiations - Risk-On Rally",
+        "timeframe": "immediate",
+        "reason": "Mentioned \"china\" in document"
+      },
+      {
+        "name": "Nvidia Stargate-OpenAI Infrastructure Buildout",
+        "timeframe": "immediate",
+        "reason": "Mentioned \"ai\" in document"
+      },
+      {
+        "name": "High-Tech CapEx Acceleration - AI Infrastructure",
+        "timeframe": "immediate",
+        "reason": "Mentioned \"ai\" in document"
+      },
+      {
+        "name": "Meta AI Infrastructure Skepticism",
+        "timeframe": "immediate",
+        "reason": "Mentioned \"ai\" in document"
+      },
+      {
+        "name": "AI Semiconductor Bottleneck - Memory Super Cycle",
+        "timeframe": "immediate",
+        "reason": "Mentioned \"ai\" in document"
+      }
+    ],
+    "new_themes": [],
+    "causalities": [
+      {
+        "source": "Document content",
+        "affects": "China-US Rare Earth Negotiations - Risk-On Rally",
+        "impact": "Potential theme update needed"
+      }
+    ]
+  },
+  "updated_themes": [
+    {
+      "theme": "China-US Rare Earth Negotiations - Risk-On Rally",
+      "timeframe_days": "7-14",
+      "thesis": "STRENGTHENED WITH RESEARCH 13: Market underpricing positive trade deal outcome. Author sees 80% probability of tariff agreement vs market pricing for continued tensions. Gold at highs on geopolitical fear - vulnerable to sharp reversal on deal. Risk/reward heavily skewed to upside on trade resolution.",
+      "catalyst": {
+        "event": "Final US-China Trade Deal OR Next Major Development",
+        "timeframe": "Q1 2026",
+        "status_note": "Partial deal reached Oct 30 (tariffs ↓10pp, rare earths paused 1yr). Awaiting final comprehensive agreement. Negotiations ongoing."
+      },
+      "picks": [
+        {
+          "ticker": "FXI",
+          "type": "etf",
+          "allocation": "4-6%",
+          "rationale": "China Large Cap ETF - direct beneficiary of trade deal. Exports to US down 27%, deal unlocks pent-up demand. Risk/reward highly asymmetric on positive news. Research 11 emphasizes 'ball held underwater' dynamic - release = explosive upside.",
+          "catalyst": "Trade deal announcement + China export recovery"
+        },
+        {
+          "ticker": "XLI",
+          "type": "etf",
+          "allocation": "3-5%",
+          "rationale": "US Industrials - benefit from easing trade tensions, capex cycle acceleration, and cyclical rotation. PMI poised to move higher (Research 11: 'inflection, expect 60 next year').",
+          "catalyst": "Trade deal + manufacturing PMI acceleration"
+        },
+        {
+          "ticker": "IWM",
+          "type": "etf",
+          "allocation": "5-7%",
+          "rationale": "Small caps bottomed in August, rallying on junk/quality reversal. Rate cuts + strong earnings + trade resolution = continued outperformance. Trading IWM/SPY ratio at inflection. Research 11 reinforces: strong earnings (10% into season, blowout results).",
+          "catalyst": "Fed cuts + PMI up-move + China deal"
+        },
+        {
+          "ticker": "DBA",
+          "type": "etf",
+          "allocation": "3-5%",
+          "rationale": "Agricultural commodities ETF. China resuming soybean purchases is explicit part of trade deal framework (from Research 5).",
+          "catalyst": "Agricultural commodity purchases restart post-deal"
+        },
+        {
+          "ticker": "GLD",
+          "type": "etf",
+          "allocation": "0% (SHORT or TRIM)",
+          "rationale": "Gold suffered biggest momentum shock since liberation day. Trade deal would reverse entire summer rally. Retail inflows at extremes. Every macro bear owns gold.",
+          "catalyst": "China-US deal eliminates safe haven bid"
+        },
+        {
+          "ticker": "NVDA",
+          "type": "stock",
+          "allocation": "5-7%",
+          "rationale": "Revenue $225B currently, sell-side sees $425B by 2030. Core AI infrastructure play. Only 40% of datacenter capex is compute - NVDA captures this high-margin segment.",
+          "catalyst": "Q4 earnings mid-December + continued AI inference acceleration"
+        },
+        {
+          "ticker": "QQQ",
+          "type": "etf",
+          "allocation": "6-8%",
+          "rationale": "Broad tech exposure to AI deflation beneficiaries. Historical pattern: Fed cuts + double-digit earnings growth + no recession = equities higher next year.",
+          "catalyst": "Year-end positioning into Fed easing cycle"
+        }
+      ],
+      "exit_trigger": "If summit canceled OR Trump announces new tariff escalation OR IWM breaks below 50-day MA",
+      "conviction": "high",
+      "research_id": "5+11+13",
+      "integrated_at": "2025-11-26T11:35:50Z",
+      "status": "monitoring",
+      "monitoring_reason": "Xi-Trump Summit occurred Oct 30, 2025 with partial trade deal: US tariffs ↓10pp, rare earth controls paused 1yr, China soybean purchases agreed. No final comprehensive deal signed yet. Follow-up Trump-Xi call late Nov. Negotiations ongoing.",
+      "monitoring_since": "2025-12-02T16:30:00Z",
+      "validation_needed": "Monitor for: (1) Final comprehensive US-China trade deal signing, (2) Implementation of agreed measures (tariff reductions, soybean purchases), (3) Further escalation or de-escalation in trade tensions",
+      "timeframe_migration": "Move from IMMEDIATE to NEAR-TERM",
+      "last_updated": "2025-12-02T12:44:19.139828",
+      "update_reason": "Mentioned \"china\" in document"
+    },
+    {
+      "theme": "Nvidia Stargate-OpenAI Infrastructure Buildout",
+      "timeframe_days": "7-14",
+      "thesis": "STRENGTHENED WITH RESEARCH 41: Mega-cap tech (MSFT, GOOGL, AMZN, META) generating $500B+ in operating FCF in 2025 while funding AI capex from existing cash flows. Unlike dotcom/railroad bubbles, these companies are profitable infrastructure owners, not speculative startups. Market may be underpricing the oligopoly position as smaller AI startups burn cash.",
+      "catalyst": {
+        "event": "Stargate partnership announcement + Q4 2025 guidance",
+        "date": "2025-11-03 (passed 23 days ago) + Q4 earnings late Jan 2026",
+        "expected_outcome": "Upward revision to data center revenue forecasts, acceleration in Blackwell ramp",
+        "status_note": "Announcement occurred Nov 3. Theme remains immediate as Q4 earnings late Jan will provide revenue visibility and guidance updates. Active trading window for positioning ahead of earnings."
+      },
+      "picks": [
+        {
+          "ticker": "MSFT",
+          "type": "stock",
+          "allocation": "5-7%",
+          "rationale": "$13B+ invested in OpenAI, capturing AI infrastructure revenues through Azure. Reduced headcount while maintaining productivity via AI. Clear monetization path through enterprise.",
+          "catalyst": "Q4 earnings + Azure AI revenue disclosure"
+        },
+        {
+          "ticker": "GOOGL",
+          "type": "stock",
+          "allocation": "4-6%",
+          "rationale": "Part of $500B FCF club, own compute infrastructure, Anthropic investment creating AI optionality. Search moat + AI integration.",
+          "catalyst": "Q4 earnings + AI search monetization metrics"
+        },
+        {
+          "ticker": "QQQ",
+          "type": "etf",
+          "allocation": "6-8%",
+          "rationale": "Concentrated exposure to mega-cap tech with strong FCF. Lower risk than individual names while capturing AI infrastructure theme.",
+          "catalyst": "Q4 earnings season aggregate results"
+        }
+      ],
+      "exit_trigger": "If OpenAI Stargate buildout delays OR hyperscaler capex guidance cuts >20% OR Nvidia breaks below 50-day MA",
+      "conviction": "high",
+      "research_id": "8+13+41",
+      "integrated_at": "2025-12-01T15:17:50.333961+00:00",
+      "status": "active",
+      "reactivation_reason": "Structural AI infrastructure build accelerating. Big Tech AI capex ~$400B in 2025 (vs $240B in 2024). Meta, Google, MSFT all raising 2025-2026 guidance. Theme is STRENGTHENING not obsolete.",
+      "reactivation_date": "2025-12-02T16:30:00Z",
+      "last_updated": "2025-12-02T12:44:19.139836",
+      "update_reason": "Mentioned \"ai\" in document"
+    },
+    {
+      "theme": "High-Tech CapEx Acceleration - AI Infrastructure",
+      "timeframe_days": "10-14",
+      "thesis": "STRENGTHENED WITH RESEARCH 34: Capex explosion: Amazon $125B in 2025, increasing in 2026. Microsoft, Google, Meta all confirming 'aggressive investment' and 'insatiable demand'. Caterpillar +12% in one day on generators/turbines for data centers. Industrial companies with AI-adjacent exposure repricing rapidly.",
+      "catalyst": {
+        "event": "Ongoing Q4 earnings + capex confirmation from hyperscalers",
+        "timeframe": "Next 10 days",
+        "expected_outcome": "More industrial companies report AI-driven margin expansion and data center revenue"
+      },
+      "picks": [
+        {
+          "ticker": "SMH",
+          "type": "etf",
+          "allocation": "4-6%",
+          "rationale": "Semiconductor ETF. Direct AI infrastructure play. FOMC highlights strong high-tech investment despite macro softness. Lower rates = cheaper capital for chip CapEx cycles.",
+          "catalyst": "Q3 earnings from major semi names, AI spending guidance"
+        },
+        {
+          "ticker": "NVDA",
+          "type": "stock",
+          "allocation": "3-5%",
+          "rationale": "AI accelerator leader. Equity markets at record highs driven by tech earnings strength per FOMC. Rate cuts make high-growth stocks more attractive (lower discount rate).",
+          "catalyst": "Q3 earnings (early Nov), data center demand updates"
+        },
+        {
+          "ticker": "VST",
+          "type": "stock",
+          "allocation": "4-6%",
+          "rationale": "Vistra Energy - Power generation for data centers. Direct beneficiary of AI power demand surge. Utilities exposure to hyperscaler buildout.",
+          "catalyst": "Q4 earnings showing data center power contract wins"
+        },
+        {
+          "ticker": "NEE",
+          "type": "stock",
+          "allocation": "3-5%",
+          "rationale": "NextEra Energy - Largest renewable utility. Grid infrastructure + power generation for AI data centers. Defensive + AI power theme combo.",
+          "catalyst": "Power purchase agreements with hyperscalers"
+        },
+        {
+          "ticker": "XLE",
+          "type": "etf",
+          "allocation": "3-5%",
+          "rationale": "Natural gas infrastructure needed for data center power. Musk confirmed AI requiring massive power build. Energy sector rotation beneficiary.",
+          "catalyst": "Winter power demand + data center announcements"
+        },
+        {
+          "ticker": "CAT",
+          "type": "stock",
+          "allocation": "3-4%",
+          "rationale": "Caterpillar: +12% post-earnings on data center power demand (generators, turbines, compressors). Also autonomous mining vehicle exposure. Industrials benefiting from both AI buildout and efficiency gains.",
+          "catalyst": "Data center power demand + autonomous vehicle adoption"
+        },
+        {
+          "ticker": "XLI",
+          "type": "etf",
+          "allocation": "4-5%",
+          "rationale": "Industrial ETF captures broad data center buildout theme. PMI expected to rise from <50 to 60 on resolution of trade uncertainty + AI infrastructure spend.",
+          "catalyst": "PMI inflection + capex ramp"
+        },
+        {
+          "ticker": "GE",
+          "type": "stock",
+          "allocation": "4-6%",
+          "rationale": "One of only 4-5 companies globally making large gas turbines. Multi-year backlog building. Gas plants are fastest deployable solution (2 years vs 7-10 for nuclear).",
+          "catalyst": "Q4 earnings showing power division order acceleration"
+        }
+      ],
+      "exit_trigger": "If tech earnings disappoint OR guidance cuts to AI CapEx spending OR VIX spikes >30 (currently 'moderate level' per FOMC)",
+      "conviction": "high",
+      "research_id": "29+34",
+      "integrated_at": "2025-12-01T00:00:00+00:00",
+      "last_updated": "2025-12-02T12:44:19.139842",
+      "update_reason": "Mentioned \"ai\" in document"
+    },
+    {
+      "theme": "Meta AI Infrastructure Skepticism",
+      "timeframe_days": "7-14",
+      "thesis": "Meta down 12% on week as market realizes AI infrastructure capex will not produce commensurate cash flows. Sentiment shift from AI-euphoria to AI-ROI-skepticism. Other mega-cap tech with massive AI spend at risk.",
+      "catalyst": {
+        "event": "Meta earnings reaction + continued AI capex scrutiny",
+        "date": "2025-10-31",
+        "expected_outcome": "Market continues to question AI infrastructure ROI across mega-cap tech"
+      },
+      "picks": [
+        {
+          "ticker": "META",
+          "type": "stock",
+          "allocation": "Tactical short or reduce longs",
+          "rationale": "Down 12% post-earnings on AI capex concerns. Market questioning cash flow generation from massive AI infrastructure investment.",
+          "catalyst": "Continued AI ROI skepticism spreads to other mega-caps"
+        },
+        {
+          "ticker": "QQQ",
+          "type": "etf",
+          "allocation": "Maintain hedge position",
+          "rationale": "Research explicitly states 'equities are hugely overbought' and 'we have the hedge that we have on, and I think that we should maintain that hedge'. AI infrastructure concerns could spread.",
+          "catalyst": "Tech earnings season revealing AI capex concerns"
+        }
+      ],
+      "exit_trigger": "If AI infrastructure spending slowdown signals emerge OR if mega-caps start cutting AI capex guidance",
+      "conviction": "medium-high",
+      "research_id": 26,
+      "portfolio_action": "Maintain existing hedge per research recommendation",
+      "status": "obsolete",
+      "obsolete_reason": "Meta Q3 earnings Oct 30, 2024 triggered initial skepticism (META -11% on AI capex concerns). Short-term thesis validated. BUT medium-term thesis INVALIDATED: META recovered to $795 ATH (Aug 2025), trading $648 (Nov 2025) = +31% YoY. AI capex spending accelerated to $400B industry-wide in 2025. Skepticism trade worked tactically (7-14 days) but structural thesis proven wrong by sustained recovery.",
+      "obsolete_date": "2025-12-01T15:03:12Z",
+      "validation_date": "2025-12-02T16:30:00Z",
+      "validation_result": "Correctly marked obsolete - short-term validated but medium-term thesis invalidated",
+      "last_updated": "2025-12-02T12:44:19.139848",
+      "update_reason": "Mentioned \"ai\" in document"
+    },
+    {
+      "theme": "AI Semiconductor Bottleneck - Memory Super Cycle",
+      "timeframe_days": "2-14",
+      "thesis": "PROMOTED TO IMMEDIATE + STRENGTHENED WITH RESEARCH 11: Recursive self-improvement models already achieved internally at OpenAI/Google per MIT insiders. Bottleneck is 100% physical infrastructure (HBM, power, cooling). Inference workloads (not training) now driving demand - structural 24/7 memory cycle through 2027. Semis up 5.4% best week since June. Q3 earnings blowouts across TSMC, ASML, Applied Materials, Micron. Micron up 3x since April on AI memory demand (from Research 5). HBM supply constraints meeting exponential demand growth. RESEARCH 13 ADDS: DRAM prices surged from September lows to recent highs - bigger move than gold rally nobody talks about. Memory shortage is THE constraint on AI deployment. Micron reports soon with massive backlog visibility.",
+      "catalyst": {
+        "event": "Tesla Shareholder Meeting - Optimus 3 Reveal + Q4 Semiconductor Earnings",
+        "date": "2025-11-06 (passed 20 days ago) + Micron Q1 earnings Dec 2025",
+        "expected_outcome": "Humanoid robot unveiling creates iPhone moment for robotics. Accelerates edge AI + NPU demand. Micron earnings confirm sustained HBM tightness.",
+        "status_note": "Nov 6 Tesla meeting passed. Optimus 3 reveal (if occurred) validates edge AI thesis. Micron Q1 earnings December = next immediate catalyst for memory demand confirmation."
+      },
+      "picks": [
+        {
+          "ticker": "MU",
+          "type": "stock",
+          "allocation": "4-6%",
+          "rationale": "Memory leader, surged 60→200 this year. HBM demand structural not cyclical. Inference = 24/7 memory demand. 2027 super cycle confirmed. Research 5: already 3x from April, embodied AI (robotaxis, humanoids) requires more memory than LLMs.",
+          "catalyst": "Q1 earnings Dec 2025 + inference workload explosion"
+        },
+        {
+          "ticker": "NVDA",
+          "type": "stock",
+          "allocation": "5-7%",
+          "rationale": "AI factory moat (not just chip). Performance-per-watt leadership. Customers deploy gigawatt scale (400-500k GPUs). No dark GPUs = no demand problem. Capacity overhang = roadmap not warning. Research 8: Stargate $400B potential revenue, 30x Blackwell performance vs Hopper.",
+          "catalyst": "Continued hyperscaler capex $350B→$500B next year"
+        },
+        {
+          "ticker": "AMAT",
+          "type": "stock",
+          "allocation": "3-5%",
+          "rationale": "Fab equipment essential for chip production scaling. Blowout Q3 earnings, 84% revenue growth. Positioned for 2025-2027 buildout.",
+          "catalyst": "Capex acceleration + memory super cycle"
+        },
+        {
+          "ticker": "SMH",
+          "type": "etf",
+          "allocation": "6-8%",
+          "rationale": "Broad semiconductor exposure. Up 5.4% best week since June per Research 11. Captures entire AI infrastructure stack (memory, GPUs, fab equipment).",
+          "catalyst": "Hyperscaler capex $350B→$500B 2026"
+        }
+      ],
+      "exit_trigger": "If hyperscalers cut capex guidance OR SMH breaks 50-day MA OR China export controls escalate rare earth to full ban",
+      "conviction": "high",
+      "research_id": "5+7+8+11+13",
+      "integrated_at": "2025-11-26T11:35:50Z",
+      "status": "active",
+      "reactivation_reason": "Micron Q1 FY2026 earnings Dec 17, 2025 (15 days away). MU +170% YTD. HBM shortage structural, AI memory demand accelerating. Theme marked obsolete based on irrelevant Tesla meeting catalyst, but Micron earnings (primary catalyst) is UPCOMING.",
+      "reactivation_date": "2025-12-02T16:30:00Z",
+      "last_updated": "2025-12-02T12:44:19.139851",
+      "update_reason": "Mentioned \"ai\" in document"
+    }
+  ],
+  "synthesis": {
+    "summary": "Updated 5 themes based on new research.",
+    "key_changes": [
+      {
+        "theme": "China-US Rare Earth Negotiations - Risk-On Rally",
+        "change": "Mentioned \"china\" in document"
+      },
+      {
+        "theme": "Nvidia Stargate-OpenAI Infrastructure Buildout",
+        "change": "Mentioned \"ai\" in document"
+      },
+      {
+        "theme": "High-Tech CapEx Acceleration - AI Infrastructure",
+        "change": "Mentioned \"ai\" in document"
+      },
+      {
+        "theme": "Meta AI Infrastructure Skepticism",
+        "change": "Mentioned \"ai\" in document"
+      },
+      {
+        "theme": "AI Semiconductor Bottleneck - Memory Super Cycle",
+        "change": "Mentioned \"ai\" in document"
+      }
+    ],
+    "macro_outlook": "Unknown",
+    "updated_at": "2025-12-02T12:44:19.139856"
+  },
+  "token_usage": {
+    "total": 48000,
+    "old_approach": 65000,
+    "savings_percent": 26.15384615384615
+  }
+}

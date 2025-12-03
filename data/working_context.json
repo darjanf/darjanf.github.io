@@ -1,0 +1,261 @@
+{
+  "metadata": {
+    "generated_at": "2025-12-02T22:40:07.725200",
+    "source_file": "k_state_output_fully_validated.json",
+    "compression_note": "Compressed from 252KB to ~15KB for efficient Claude processing",
+    "last_validated": "Unknown"
+  },
+  "tactical_themes": {
+    "total_count": 33,
+    "themes": [
+      {
+        "theme": "China-US Rare Earth Negotiations - Risk-On Rally",
+        "timeframe": "7-14",
+        "status": "IMMEDIATE",
+        "picks_count": 7,
+        "catalyst": "Xi-Trump Summit / Trade Deal Announcement"
+      },
+      {
+        "theme": "AI Semiconductor Bottleneck - Memory Super Cycle",
+        "timeframe": "2-14",
+        "status": "IMMEDIATE",
+        "picks_count": 4,
+        "catalyst": "Tesla Shareholder Meeting - Optimus 3 Reveal + Q4 Semiconductor Earnings"
+      },
+      {
+        "theme": "Regional Bank Liquidity Squeeze - Fed QT End Trade",
+        "timeframe": "7-14",
+        "status": "IMMEDIATE",
+        "picks_count": 2,
+        "catalyst": "Next Fed Meeting - QT End Announcement"
+      },
+      {
+        "theme": "Nvidia Stargate-OpenAI Infrastructure Buildout",
+        "timeframe": "7-14",
+        "status": "IMMEDIATE",
+        "picks_count": 3,
+        "catalyst": "Stargate partnership announcement + Q4 2025 guidance"
+      },
+      {
+        "theme": "Tesla Energy Business Breakout",
+        "timeframe": "4-14",
+        "status": "IMMEDIATE",
+        "picks_count": 2,
+        "catalyst": "Tesla pay package re-vote + Q4 earnings + AI5 chip reveal"
+      },
+      {
+        "theme": "Alternative Debasement Hedges Over Gold",
+        "timeframe": "7-14",
+        "status": "IMMEDIATE",
+        "picks_count": 3,
+        "catalyst": "Market realization that gold rally disconnected from broader debasement theme"
+      },
+      {
+        "theme": "AI Video Generation Monetization Wave",
+        "timeframe": "7-14",
+        "status": "IMMEDIATE",
+        "picks_count": 3,
+        "catalyst": "Sora recent launch with social networking features"
+      },
+      {
+        "theme": "Balance Sheet Runoff Ending - Bank Beneficiaries",
+        "timeframe": "7-14",
+        "status": "IMMEDIATE",
+        "picks_count": 2,
+        "catalyst": "Fed Balance Sheet Runoff Decision / FOMC Meeting"
+      },
+      {
+        "theme": "Soft Landing Risk-On Cyclicals",
+        "timeframe": "7-14",
+        "status": "IMMEDIATE",
+        "picks_count": 2,
+        "catalyst": "Next FOMC Meeting / Fed Rate Decision"
+      },
+      {
+        "theme": "Rate Cut Cyclical Rotation",
+        "timeframe": "2-14",
+        "status": "IMMEDIATE",
+        "picks_count": 2,
+        "catalyst": "FOMC Rate Cut Delivered"
+      },
+      {
+        "theme": "Duration Trade Reversal - Short Long-Term Treasuries",
+        "timeframe": "7-14",
+        "status": "IMMEDIATE",
+        "picks_count": 2,
+        "catalyst": "Market realizes Fed cutting into elevated inflation"
+      },
+      {
+        "theme": "Treasury Bill Supply Surge - Front-End Yield Compression",
+        "timeframe": "7-14",
+        "status": "IMMEDIATE",
+        "picks_count": 2,
+        "catalyst": "Treasury Quarterly Refunding Announcement"
+      },
+      {
+        "theme": "Long-Duration Treasury Relative Value - Supply Imbalance",
+        "timeframe": "10-14",
+        "status": "IMMEDIATE",
+        "picks_count": 2,
+        "catalyst": "December FOMC Meeting"
+      },
+      {
+        "theme": "Rate Cut Cyclicals Rally - Smallcaps Lead",
+        "timeframe": "7-14",
+        "status": "IMMEDIATE",
+        "picks_count": 2,
+        "catalyst": "Next FOMC Meeting"
+      },
+      {
+        "theme": "High-Tech CapEx Acceleration - AI Infrastructure",
+        "timeframe": "10-14",
+        "status": "IMMEDIATE",
+        "picks_count": 8,
+        "catalyst": "Ongoing Q4 earnings + capex confirmation from hyperscalers"
+      },
+      {
+        "theme": "Fed Dovish Pivot - Small Cap & Regional Bank Revival",
+        "timeframe": "2-14",
+        "status": "IMMEDIATE",
+        "picks_count": 3,
+        "catalyst": "PMI data + retail options squeeze + quant unwind"
+      },
+      {
+        "theme": "QT Conclusion Treasury Duration Trade",
+        "timeframe": "5-14",
+        "status": "IMMEDIATE",
+        "picks_count": 2,
+        "catalyst": "QT Program Ends"
+      },
+      {
+        "theme": "Dovish Dissent Precious Metals Surge",
+        "timeframe": "3-10",
+        "status": "IMMEDIATE",
+        "picks_count": 3,
+        "catalyst": "Market Digests Dovish FOMC Split + Dec Rate Expectations Shift"
+      },
+      {
+        "theme": "Supreme Court Tariff Chaos Trade",
+        "timeframe": 4,
+        "status": "IMMEDIATE",
+        "picks_count": 2,
+        "catalyst": "Supreme Court Oral Arguments - Trump Tariff Legality"
+      },
+      {
+        "theme": "QRA Non-Event Positioning",
+        "timeframe": 7,
+        "status": "IMMEDIATE",
+        "picks_count": 2,
+        "catalyst": "Treasury Quarterly Refunding Announcement (QRA)"
+      },
+      {
+        "theme": "Meta AI Infrastructure Skepticism",
+        "timeframe": "7-14",
+        "status": "IMMEDIATE",
+        "picks_count": 2,
+        "catalyst": "Meta earnings reaction + continued AI capex scrutiny"
+      },
+      {
+        "theme": "Tesla Autonomy Inflection Q4 2025",
+        "timeframe": "7-14",
+        "status": "IMMEDIATE",
+        "picks_count": 2,
+        "catalyst": "Unsupervised FSD launch (no safety monitor)"
+      },
+      {
+        "theme": "Semiconductor Memory Shortage Rally",
+        "timeframe": "7-14",
+        "status": "IMMEDIATE",
+        "picks_count": 3,
+        "catalyst": "DRAM price surge continuation + Q4 earnings season for memory players"
+      },
+      {
+        "theme": "Solar Capitulation Setup - Contrarian Energy Play",
+        "timeframe": "10-14",
+        "status": "IMMEDIATE",
+        "picks_count": 2,
+        "catalyst": "Year-end tax loss selling completion + Q1 2026 datacenter power announcements"
+      },
+      {
+        "theme": "Bitcoin Extreme Fear Bottom Setup",
+        "timeframe": "2-14",
+        "status": "IMMEDIATE",
+        "picks_count": 2,
+        "catalyst": "Fed QT ending + TGA drawdown releasing liquidity"
+      },
+      {
+        "theme": "US Cyclical Reacceleration Trade",
+        "timeframe": "7-14",
+        "status": "IMMEDIATE",
+        "picks_count": 3,
+        "catalyst": "Next NFP report + ISM manufacturing confirming trend"
+      },
+      {
+        "theme": "Japan Credit Acceleration Play",
+        "timeframe": "7-14",
+        "status": "IMMEDIATE",
+        "picks_count": 2,
+        "catalyst": "BOJ policy meeting + Japan GDP release"
+      },
+      {
+        "theme": "Government Shutdown Resolution Liquidity Surge",
+        "timeframe": "7-14",
+        "status": "IMMEDIATE",
+        "picks_count": 3,
+        "catalyst": "Short-term Continued Resolution (CR) expected"
+      },
+      {
+        "theme": "Crypto Regulatory Clarity Pre-Christmas Rally",
+        "timeframe": "14-45",
+        "status": "IMMEDIATE",
+        "picks_count": 3,
+        "catalyst": "CLARITY Act Senate vote"
+      },
+      {
+        "theme": "Short Speculative AI Startups / Long Profitable AI Users",
+        "timeframe": "7-14",
+        "status": "IMMEDIATE",
+        "picks_count": 3,
+        "catalyst": "Private market AI valuations reset OR venture funding slowdown"
+      },
+      {
+        "theme": "Tail Risk Hedge - AI Bubble Burst Protection",
+        "timeframe": "2-14",
+        "status": "IMMEDIATE",
+        "picks_count": 3,
+        "catalyst": "Market volatility spike OR Fed policy error signal"
+      },
+      {
+        "theme": "Year-End Liquidity Crunch Banks Play",
+        "timeframe": "7-30",
+        "status": "IMMEDIATE",
+        "picks_count": 3,
+        "catalyst": "Year-end funding market stress + potential Fed balance sheet expansion announcement"
+      },
+      {
+        "theme": "Fed Liquidity = Risk-On Reflexivity",
+        "timeframe": "14-45",
+        "status": "IMMEDIATE",
+        "picks_count": 3,
+        "catalyst": "Fed balance sheet expansion announcement"
+      }
+    ]
+  },
+  "macro_context": {
+    "regime": "Unknown",
+    "growth_outlook": "Unknown",
+    "inflation_status": "Unknown",
+    "fed_policy": "Unknown",
+    "key_risks_count": 64,
+    "top_risk": "Xi-Trump trade talks collapse, tariffs escalate beyond current levels"
+  },
+  "catalyst_calendar": {
+    "upcoming_count": 0,
+    "next_catalysts": []
+  },
+  "research_sources": {
+    "total_sources": 27,
+    "latest_research_id": 42,
+    "news_articles_processed": 293
+  }
+}
