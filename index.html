@@ -743,6 +743,371 @@
         ::-webkit-scrollbar-thumb:hover {
             background: #2a2a2a;
         }
+
+        /* Mobile Navigation Toggle */
+        .mobile-nav-toggle {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: none;
+            color: #fff;
+            font-size: 24px;
+            cursor: pointer;
+            z-index: 100;
+            box-shadow: 0 4px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .mobile-back-btn {
+            display: none;
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            padding: 10px 16px;
+            background: #0f0f0f;
+            border: 1px solid #1a1a1a;
+            border-radius: 8px;
+            color: #fff;
+            font-size: 14px;
+            cursor: pointer;
+            z-index: 100;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .mobile-header {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: #0a0a0a;
+            border-bottom: 1px solid #1a1a1a;
+            padding: 15px 20px;
+            z-index: 90;
+        }
+
+        .mobile-header h1 {
+            font-size: 16px;
+            color: #fff;
+        }
+
+        .mobile-header p {
+            font-size: 12px;
+            color: #666;
+        }
+
+        /* ========== RESPONSIVE: Tablet (768px - 1024px) ========== */
+        @media (max-width: 1024px) {
+            .sidebar {
+                width: 220px;
+            }
+
+            .area-synthesis {
+                width: 320px;
+                padding: 20px;
+            }
+
+            .cluster-list {
+                width: 280px;
+            }
+
+            .hero-section {
+                padding: 40px;
+            }
+
+            .hero-title {
+                font-size: 28px;
+            }
+
+            .hero-card {
+                padding: 30px;
+            }
+        }
+
+        /* ========== RESPONSIVE: Small Tablet / Large Phone (600px - 768px) ========== */
+        @media (max-width: 768px) {
+            body {
+                overflow: auto;
+            }
+
+            .main-container {
+                flex-direction: column;
+                height: auto;
+                min-height: 100vh;
+            }
+
+            .mobile-header {
+                display: block;
+            }
+
+            .mobile-nav-toggle {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .sidebar {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 280px;
+                height: 100vh;
+                z-index: 200;
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+            }
+
+            .sidebar.open {
+                transform: translateX(0);
+            }
+
+            .sidebar-overlay {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(0, 0, 0, 0.7);
+                z-index: 150;
+            }
+
+            .sidebar-overlay.visible {
+                display: block;
+            }
+
+            .content-area {
+                width: 100%;
+                margin-top: 60px;
+            }
+
+            .hero-section {
+                padding: 20px;
+                padding-bottom: 80px;
+            }
+
+            .hero-title {
+                font-size: 24px;
+            }
+
+            .hero-card {
+                padding: 20px;
+                margin-bottom: 20px;
+            }
+
+            .hero-card h2 {
+                font-size: 18px;
+            }
+
+            .hero-card p {
+                font-size: 14px;
+            }
+
+            .hero-cta-container {
+                margin-top: 30px;
+            }
+
+            .workspace {
+                flex-direction: column;
+                height: auto;
+                min-height: calc(100vh - 60px);
+            }
+
+            .workspace.visible {
+                display: flex;
+            }
+
+            .area-synthesis {
+                width: 100%;
+                border-right: none;
+                border-bottom: 1px solid #1a1a1a;
+                padding: 20px;
+                max-height: none;
+            }
+
+            .cluster-list {
+                width: 100%;
+                border-right: none;
+                border-bottom: 1px solid #1a1a1a;
+                padding: 15px;
+                max-height: none;
+            }
+
+            .chat-area {
+                width: 100%;
+                min-height: 500px;
+                padding-bottom: 80px;
+            }
+
+            .chat-messages {
+                max-height: none;
+                padding: 20px;
+            }
+
+            .message-content {
+                margin-left: 0;
+            }
+
+            .chat-input-area {
+                padding: 15px 20px;
+            }
+
+            .quick-actions {
+                flex-direction: column;
+            }
+
+            .quick-action-btn {
+                text-align: center;
+            }
+        }
+
+        /* ========== RESPONSIVE: Phone (< 600px) ========== */
+        @media (max-width: 600px) {
+            .hero-title {
+                font-size: 20px;
+            }
+
+            .hero-card {
+                padding: 15px;
+            }
+
+            .hero-card h2 {
+                font-size: 16px;
+            }
+
+            .hero-card p {
+                font-size: 13px;
+                line-height: 1.6;
+            }
+
+            .hero-cta {
+                padding: 14px 24px;
+                font-size: 14px;
+                width: 100%;
+            }
+
+            .story-box, .warning-box {
+                padding: 15px;
+            }
+
+            .synthesis-title {
+                font-size: 18px;
+            }
+
+            .synthesis-content {
+                font-size: 13px;
+            }
+
+            .synthesis-section {
+                padding: 15px;
+            }
+
+            .cluster-item {
+                padding: 12px;
+            }
+
+            .cluster-title {
+                font-size: 13px;
+            }
+
+            .cluster-themes {
+                font-size: 10px;
+                padding-left: 0;
+            }
+
+            .cluster-meta {
+                padding-left: 0;
+                flex-wrap: wrap;
+            }
+
+            .chat-header {
+                padding: 15px 20px;
+            }
+
+            .chat-header h3 {
+                font-size: 14px;
+            }
+
+            .chat-messages {
+                padding: 15px;
+            }
+
+            .message-content {
+                padding: 12px 15px;
+            }
+
+            .message-content p {
+                font-size: 13px;
+            }
+
+            .message-content h4 {
+                font-size: 14px;
+            }
+
+            .chat-tabs {
+                padding: 0 10px;
+            }
+
+            .chat-tab {
+                padding: 10px 12px;
+                font-size: 12px;
+            }
+
+            .new-chat-btn {
+                padding: 10px 12px;
+                font-size: 12px;
+            }
+
+            .send-btn {
+                padding: 10px 16px;
+                font-size: 13px;
+            }
+
+            .chat-input {
+                padding: 10px 12px;
+                font-size: 13px;
+            }
+        }
+
+        /* ========== RESPONSIVE: Very Small Phone (< 400px) ========== */
+        @media (max-width: 400px) {
+            .mobile-header {
+                padding: 12px 15px;
+            }
+
+            .mobile-header h1 {
+                font-size: 14px;
+            }
+
+            .hero-section {
+                padding: 15px;
+            }
+
+            .hero-title {
+                font-size: 18px;
+            }
+
+            .hero-card p {
+                font-size: 12px;
+            }
+
+            .synthesis-title {
+                font-size: 16px;
+            }
+
+            .cluster-header {
+                gap: 8px;
+            }
+
+            .cluster-icon {
+                font-size: 16px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -752,9 +1117,21 @@
         <div class="loading-text">Lade Retail-Analyse...</div>
     </div>
 
+    <!-- Mobile Header -->
+    <div class="mobile-header">
+        <h1>K-State Intelligence</h1>
+        <p>Dein Investment-Copilot</p>
+    </div>
+
+    <!-- Mobile Navigation Toggle Button -->
+    <button class="mobile-nav-toggle" id="mobileNavToggle" onclick="toggleMobileNav()">☰</button>
+
+    <!-- Sidebar Overlay for Mobile -->
+    <div class="sidebar-overlay" id="sidebarOverlay" onclick="closeMobileNav()"></div>
+
     <div class="main-container">
         <!-- Column 1: Left Sidebar - Area Navigation -->
-        <aside class="sidebar">
+        <aside class="sidebar" id="sidebar">
             <div class="sidebar-header">
                 <h1>K-State Intelligence</h1>
                 <p>Dein Investment-Copilot</p>
@@ -828,6 +1205,43 @@
     </div>
 
     <script>
+        // ============================================
+        // MOBILE NAVIGATION
+        // ============================================
+
+        function toggleMobileNav() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('sidebarOverlay');
+            const toggle = document.getElementById('mobileNavToggle');
+
+            sidebar.classList.toggle('open');
+            overlay.classList.toggle('visible');
+
+            // Change icon
+            if (sidebar.classList.contains('open')) {
+                toggle.textContent = '✕';
+            } else {
+                toggle.textContent = '☰';
+            }
+        }
+
+        function closeMobileNav() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('sidebarOverlay');
+            const toggle = document.getElementById('mobileNavToggle');
+
+            sidebar.classList.remove('open');
+            overlay.classList.remove('visible');
+            toggle.textContent = '☰';
+        }
+
+        // Close mobile nav when clicking on a menu item (for mobile)
+        function handleMobileNavClick() {
+            if (window.innerWidth <= 768) {
+                closeMobileNav();
+            }
+        }
+
         // ============================================
         // DATA LOADING FROM retail_analysis.json
         // ============================================
@@ -952,8 +1366,47 @@
                 }
             }
 
+            // Create fallback clusterData for clusters referenced in areas but not in clusters object
+            for (const [areaId, area] of Object.entries(areaData)) {
+                for (const clusterItem of (area.clusters || [])) {
+                    if (!clusterData[clusterItem.id]) {
+                        // Find the original area data to get more info
+                        const originalArea = areas[areaId];
+                        const synthesis = originalArea?.synthesis || {};
+                        const topCluster = synthesis.top_cluster;
+                        const relatedCluster = (originalArea?.related_clusters || []).find(rc => rc.cluster_id === clusterItem.id);
+
+                        // Create fallback data from available info
+                        clusterData[clusterItem.id] = {
+                            title: clusterItem.title || clusterItem.id,
+                            subtitle: topCluster?.why_important || relatedCluster?.one_liner || '',
+                            initialMessage: generateFallbackMessage(clusterItem, topCluster, relatedCluster, synthesis),
+                            prompts: [
+                                'Erkläre mir die wichtigsten Punkte',
+                                'Welche Risiken gibt es?',
+                                'Wie sollte ich mich positionieren?'
+                            ],
+                            themes_included: []
+                        };
+                        console.log('Created fallback clusterData for:', clusterItem.id);
+                    }
+                }
+            }
+
             console.log('Transformed areaData:', areaData);
             console.log('Transformed clusterData:', clusterData);
+        }
+
+        // Generate fallback message for clusters without detailed content
+        function generateFallbackMessage(clusterItem, topCluster, relatedCluster, synthesis) {
+            const title = clusterItem.title || clusterItem.id;
+            const description = topCluster?.why_important || relatedCluster?.one_liner || '';
+            const keyTakeaway = synthesis.key_takeaway || '';
+
+            return '<h4>' + title + '</h4>' +
+                '<p>' + description + '</p>' +
+                (keyTakeaway ? '<p style="margin-top: 15px;"><strong>Key Takeaway:</strong> ' + keyTakeaway + '</p>' : '') +
+                '<p style="margin-top: 15px; color: #999; font-size: 13px;">Detaillierte Analyse wird noch erstellt. Stelle mir gerne Fragen zu diesem Thema!</p>';
         }
 
         // Render area navigation in sidebar
@@ -962,7 +1415,7 @@
 
             // Home item
             let html = `
-                <div class="area-item active" onclick="showHero()">
+                <div class="area-item active" onclick="showHero(); handleMobileNavClick();">
                     <span class="area-icon">🏠</span>
                     <div class="area-content">
                         <div class="area-title">Start hier!</div>
@@ -973,7 +1426,7 @@
 
             // Synthesis item (Portfolio-Überblick)
             html += `
-                <div class="area-item" data-area="synthesis" onclick="showSynthesis()">
+                <div class="area-item" data-area="synthesis" onclick="showSynthesis(); handleMobileNavClick();">
                     <span class="area-icon">📊</span>
                     <div class="area-content">
                         <div class="area-title">Markt-Synthese</div>
@@ -984,7 +1437,7 @@
 
             // Portfolio item
             html += `
-                <div class="area-item" data-area="portfolio" onclick="showPortfolio()">
+                <div class="area-item" data-area="portfolio" onclick="showPortfolio(); handleMobileNavClick();">
                     <span class="area-icon">💼</span>
                     <div class="area-content">
                         <div class="area-title">Portfolio</div>
@@ -1012,7 +1465,7 @@
                 const icon = areaIcons[areaId] || '📊';
 
                 html += `
-                    <div class="area-item" data-area="${areaId}" onclick="selectArea('${areaId}')">
+                    <div class="area-item" data-area="${areaId}" onclick="selectArea('${areaId}'); handleMobileNavClick();">
                         <span class="area-icon">${icon}</span>
                         <div class="area-content">
                             <div class="area-title">${area.title}</div>
@@ -1139,7 +1592,7 @@
             `;
         }
 
-        // Show Portfolio
+        // Show Portfolio (4-column workspace layout)
         function showPortfolio() {
             const portfolio = retailAnalysis?.content?.portfolio;
             const summary = retailAnalysis?.content?.retail_summary;
@@ -1148,93 +1601,188 @@
                 return;
             }
 
+            currentArea = 'portfolio';
+            currentCluster = null;
+
             // Update sidebar
             document.querySelectorAll('.area-item').forEach(item => item.classList.remove('active'));
             document.querySelector('.area-item[data-area="portfolio"]').classList.add('active');
 
-            // Show hero section (full-width), hide workspace
-            document.getElementById('heroSection').classList.remove('hidden');
-            document.getElementById('workspace').classList.remove('visible');
+            // Hide hero, show workspace (4-column layout)
+            document.getElementById('heroSection').classList.add('hidden');
+            document.getElementById('workspace').classList.add('visible');
 
             const alloc = portfolio.asset_allocation || {};
             const sectors = portfolio.sector_allocation || [];
 
-            // Render portfolio in hero section (full-width layout)
-            const heroSection = document.getElementById('heroSection');
-            heroSection.innerHTML = `
-                <h1 class="hero-title">📈 Portfolio Allocation</h1>
+            // Render Column 2: Portfolio Summary (Asset Allocation)
+            renderPortfolioSynthesis(alloc, summary);
+
+            // Render Column 3: Sector List (clickable positions)
+            renderPortfolioSectorList(sectors);
+
+            // Reset Column 4: Chat Area
+            resetChatArea();
+        }
+
+        // Render Portfolio Synthesis (Column 2)
+        function renderPortfolioSynthesis(alloc, summary) {
+            const container = document.getElementById('areaSynthesis');
+
+            container.innerHTML = `
+                <div class="synthesis-title">💼 Portfolio Allocation</div>
 
                 ${summary?.one_liner ? `
-                <div class="hero-card" style="text-align: center;">
-                    <p style="font-size: 18px;"><strong>${summary.one_liner}</strong></p>
+                <div class="synthesis-content" style="margin-bottom: 20px;">
+                    <p><strong>${summary.one_liner}</strong></p>
                 </div>
                 ` : ''}
 
-                <div class="hero-card">
-                    <h2>📊 Asset Allocation</h2>
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 20px;">
-                        <div style="padding: 15px; background: rgba(102, 126, 234, 0.1); border-radius: 8px;">
-                            <p style="font-size: 24px; font-weight: bold; color: #667eea;">${alloc.equities?.percent || 0}%</p>
-                            <p><strong>Aktien</strong></p>
-                            <p style="font-size: 12px; opacity: 0.8;">${alloc.equities?.rationale || ''}</p>
+                <div class="synthesis-section">
+                    <div class="synthesis-section-title">📊 Asset Allocation</div>
+                    <div style="display: flex; flex-direction: column; gap: 12px;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px; background: rgba(102, 126, 234, 0.1); border-radius: 6px;">
+                            <span>Aktien</span>
+                            <span style="font-weight: bold; color: #667eea;">${alloc.equities?.percent || 0}%</span>
                         </div>
-                        <div style="padding: 15px; background: rgba(74, 158, 255, 0.1); border-radius: 8px;">
-                            <p style="font-size: 24px; font-weight: bold; color: #4a9eff;">${alloc.bonds?.percent || 0}%</p>
-                            <p><strong>Anleihen</strong></p>
-                            <p style="font-size: 12px; opacity: 0.8;">${alloc.bonds?.rationale || ''}</p>
+                        <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px; background: rgba(74, 158, 255, 0.1); border-radius: 6px;">
+                            <span>Anleihen</span>
+                            <span style="font-weight: bold; color: #4a9eff;">${alloc.bonds?.percent || 0}%</span>
                         </div>
-                        <div style="padding: 15px; background: rgba(255, 215, 68, 0.1); border-radius: 8px;">
-                            <p style="font-size: 24px; font-weight: bold; color: #ffd744;">${alloc.commodities?.percent || 0}%</p>
-                            <p><strong>Rohstoffe</strong></p>
-                            <p style="font-size: 12px; opacity: 0.8;">${alloc.commodities?.rationale || ''}</p>
+                        <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px; background: rgba(255, 215, 68, 0.1); border-radius: 6px;">
+                            <span>Rohstoffe</span>
+                            <span style="font-weight: bold; color: #ffd744;">${alloc.commodities?.percent || 0}%</span>
                         </div>
-                        <div style="padding: 15px; background: rgba(150, 150, 150, 0.1); border-radius: 8px;">
-                            <p style="font-size: 24px; font-weight: bold; color: #999;">${alloc.cash?.percent || 0}%</p>
-                            <p><strong>Cash</strong></p>
-                            <p style="font-size: 12px; opacity: 0.8;">${alloc.cash?.rationale || ''}</p>
+                        <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px; background: rgba(150, 150, 150, 0.1); border-radius: 6px;">
+                            <span>Cash</span>
+                            <span style="font-weight: bold; color: #999;">${alloc.cash?.percent || 0}%</span>
                         </div>
-                        <div style="padding: 15px; background: rgba(255, 68, 68, 0.1); border-radius: 8px;">
-                            <p style="font-size: 24px; font-weight: bold; color: #ff4444;">${alloc.hedges?.percent || 0}%</p>
-                            <p><strong>Hedges</strong></p>
-                            <p style="font-size: 12px; opacity: 0.8;">${alloc.hedges?.rationale || ''}</p>
+                        <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px; background: rgba(255, 68, 68, 0.1); border-radius: 6px;">
+                            <span>Hedges</span>
+                            <span style="font-weight: bold; color: #ff4444;">${alloc.hedges?.percent || 0}%</span>
                         </div>
                     </div>
                 </div>
 
-                ${sectors.length > 0 ? `
-                <div class="hero-card">
-                    <h2>🏭 Sektor-Allokation</h2>
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; margin-top: 20px;">
-                        ${sectors.map(sector => `
-                            <div style="padding: 15px; background: #0f0f0f; border: 1px solid #1a1a1a; border-radius: 8px;">
-                                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-                                    <span style="font-weight: 600;">${sector.sector}</span>
-                                    <span style="color: #667eea; font-weight: bold;">${sector.percent}%</span>
-                                </div>
-                                <p style="font-size: 12px; color: #999;">${sector.rationale || ''}</p>
-                                ${sector.positions ? `<p style="font-size: 11px; color: #666; margin-top: 8px;">Positionen: ${sector.positions.join(', ')}</p>` : ''}
-                            </div>
-                        `).join('')}
+                <div class="synthesis-section" style="background: rgba(102, 126, 234, 0.1); border-left: 3px solid #667eea;">
+                    <div class="synthesis-section-title" style="color: #667eea;">🎯 Strategie</div>
+                    <div class="synthesis-content">
+                        <p style="font-size: 13px;">${alloc.equities?.rationale || 'Klicke auf einen Sektor für Details.'}</p>
                     </div>
-                </div>
-                ` : ''}
-
-                ${summary?.top_3_actions ? `
-                <div class="hero-card" style="border-left: 3px solid #667eea;">
-                    <h2 style="color: #667eea;">🎯 Top 3 Actions</h2>
-                    ${summary.top_3_actions.map((action, i) => `
-                        <div style="padding: 12px; margin: 10px 0; background: rgba(102, 126, 234, 0.05); border-radius: 6px;">
-                            <strong>${i+1}.</strong> ${action}
-                        </div>
-                    `).join('')}
-                </div>
-                ` : ''}
-
-                <div class="hero-cta-container">
-                    <p>Tiefere Analyse der Bereiche?</p>
-                    <button class="hero-cta" onclick="selectArea('macro')">🏛️ Makro & Geldpolitik</button>
                 </div>
             `;
+        }
+
+        // Render Portfolio Sector List (Column 3)
+        function renderPortfolioSectorList(sectors) {
+            const container = document.getElementById('clusterList');
+
+            const sectorsHtml = sectors.map((sector, index) => `
+                <div class="cluster-item" data-sector-index="${index}" onclick="selectPortfolioSector(${index})">
+                    <div class="cluster-header">
+                        <span class="cluster-icon">📈</span>
+                        <span class="cluster-title">${sector.sector}</span>
+                    </div>
+                    <div class="cluster-themes">${sector.positions ? sector.positions.map(p => p.ticker).join(', ') : ''}</div>
+                    <div class="cluster-meta">
+                        <span class="cluster-timeframe">${sector.positions?.length || 0} Positionen</span>
+                        <span class="cluster-urgency urgency-high" style="background: rgba(102, 126, 234, 0.2); color: #667eea;">${sector.percent}%</span>
+                    </div>
+                </div>
+            `).join('');
+
+            container.innerHTML = `
+                <div class="cluster-list-header">
+                    <div class="cluster-list-title">🏭 Sektor-Allokation</div>
+                </div>
+                ${sectorsHtml || '<p style="color: #666; padding: 20px;">Keine Sektoren verfügbar</p>'}
+            `;
+        }
+
+        // Select Portfolio Sector (shows details in Column 4)
+        function selectPortfolioSector(sectorIndex) {
+            const portfolio = retailAnalysis?.content?.portfolio;
+            const sector = portfolio?.sector_allocation?.[sectorIndex];
+            if (!sector) return;
+
+            // Update active state in sector list
+            document.querySelectorAll('.cluster-item').forEach(item => item.classList.remove('active'));
+            document.querySelector(`.cluster-item[data-sector-index="${sectorIndex}"]`)?.classList.add('active');
+
+            // Render sector details in chat area (Column 4)
+            const chatContainer = document.getElementById('chatContainers');
+
+            const positionsHtml = (sector.positions || []).map(p => `
+                <div style="padding: 12px; margin: 10px 0; background: #0a0a0a; border: 1px solid #1a1a1a; border-radius: 6px;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                        <strong style="color: #4a9eff;">${p.ticker}</strong>
+                        <span style="color: #667eea; font-weight: bold;">${p.percent}%</span>
+                    </div>
+                    <p style="font-size: 13px; color: #b0b0b0; line-height: 1.6;">${p.rationale}</p>
+                </div>
+            `).join('');
+
+            const exitTriggersHtml = (sector.exit_triggers || []).map(t => `<li style="margin: 6px 0; color: #b0b0b0;">${t}</li>`).join('');
+
+            chatContainer.innerHTML = `
+                <div class="chat-container active">
+                    <div class="chat-header">
+                        <h3>${sector.sector}</h3>
+                        <p>${sector.percent}% Portfolio-Gewichtung</p>
+                    </div>
+                    <div class="chat-messages" style="padding: 30px;">
+                        <div class="message">
+                            <div class="message-header">
+                                <div class="message-avatar avatar-claude">🤖</div>
+                                <span class="message-sender">Claude</span>
+                            </div>
+                            <div class="message-content">
+                                <h4>📊 Warum ${sector.percent}%?</h4>
+                                <p>${sector.rationale_why_this_percent || sector.rationale || ''}</p>
+
+                                <h4 style="margin-top: 25px;">💰 Positionen</h4>
+                                ${positionsHtml}
+
+                                <h4 style="margin-top: 25px;">⏰ Entry Timing</h4>
+                                <p>${sector.entry_timing || 'N/A'}</p>
+
+                                ${exitTriggersHtml ? `
+                                <h4 style="margin-top: 25px;">🚨 Exit Triggers</h4>
+                                <ul style="padding-left: 20px;">
+                                    ${exitTriggersHtml}
+                                </ul>
+                                ` : ''}
+
+                                <div class="quick-actions" style="margin-top: 20px;">
+                                    <div class="quick-action-btn" onclick="askAboutSector('${sector.sector}', 'Risiken')">Was sind die Risiken?</div>
+                                    <div class="quick-action-btn" onclick="askAboutSector('${sector.sector}', 'Alternativen')">Gibt es Alternativen?</div>
+                                    <div class="quick-action-btn" onclick="askAboutSector('${sector.sector}', 'Timing')">Wann einsteigen?</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            document.getElementById('chatTabs').innerHTML = `
+                <div class="chat-tab active">${sector.sector}</div>
+                <div class="new-chat-btn" onclick="showPortfolio()">
+                    <span>←</span><span>Alle Sektoren</span>
+                </div>
+            `;
+
+            // Scroll to top
+            setTimeout(() => {
+                const messagesDiv = chatContainer.querySelector('.chat-messages');
+                if (messagesDiv) {
+                    messagesDiv.scrollTop = 0;
+                }
+            }, 50);
+        }
+
+        // Ask about sector (placeholder for future API integration)
+        function askAboutSector(sectorName, topic) {
+            alert('Feature kommt bald: Frage zu "' + topic + '" für ' + sectorName);
         }
 
         // Show sector detail in chat area
@@ -1618,7 +2166,8 @@
             setTimeout(() => {
                 const messagesDiv = document.getElementById(`messages-${chatId}`);
                 if (messagesDiv) {
-                    messagesDiv.scrollTop = messagesDiv.scrollHeight;
+                    // Scroll to TOP on initial view, not bottom
+                    messagesDiv.scrollTop = 0;
                 }
             }, 100);
         }
